@@ -103,10 +103,28 @@
     <Compile Include="..\..\..\..\..\Desktop\Control_Horas.Designer.cs">
       <DependentUpon>Control_Horas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Conexion_db.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Conexion_db.Designer.cs">
+      <DependentUpon>Conexion_db.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Opciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Opciones.Designer.cs">
+      <DependentUpon>Menu_Opciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="..\..\..\..\..\Desktop\Control_Horas.resx">
       <DependentUpon>Control_Horas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Conexion_db.resx">
+      <DependentUpon>Conexion_db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Opciones.resx">
+      <DependentUpon>Menu_Opciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
