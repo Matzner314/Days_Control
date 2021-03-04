@@ -8,7 +8,6 @@ namespace Contro_Dias
 {
     public class getSet
     {
-        static public string conn = " ";
         static public string connectionString = " ";
     }
 }

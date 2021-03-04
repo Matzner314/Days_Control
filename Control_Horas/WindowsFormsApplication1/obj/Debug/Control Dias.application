@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Control Dias.exe.manifest" size="7085">
+    <dependentAssembly dependencyType="install" codebase="Control Dias.exe.manifest" size="7086">
       <assemblyIdentity name="Control Dias.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OX2YtKs52dp2RjnHD0+gEZv92qjZVA/097ULgKLKBjU=</dsig:DigestValue>
+        <dsig:DigestValue>vk0XQwH7BEwvZbcB3AYgaD7QhH9Duhf7rblO7YlQJrU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

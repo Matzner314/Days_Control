@@ -24,21 +24,24 @@ namespace Contro_Dias
             string connectionString = getSet.connectionString;
             DateTime from = dateTimePicker1.Value;
             DateTime to = dateTimePicker2.Value;
-            string queryString = "select * from tblDayCount where ConsecutiveDays >= 7 AND InicialDate BETWEEN '"+from+"' AND '"+to+"' order by InicialDate desc";
-            try
+            string queryString = "select Name AS Nombre, ConsecutiveDays AS Dias_Seguidos, CardID AS ID_Tarjeta, InicialDate AS Ultimo_Registro, FinalDate AS Primer_Registro from tblDayCount where ConsecutiveDays >= 7 AND InicialDate BETWEEN '"+from+"' AND '"+to+"' order by InicialDate desc";
+            if (connectionString != " ")
             {
-                SqlConnection connection = new SqlConnection(connectionString);
-                SqlCommand commandID = new SqlCommand(queryString, connection);
-                DataTable tbl = new DataTable();
-                connection.Open();
-                SqlDataAdapter adapt = new SqlDataAdapter(queryString, connectionString);
-                adapt.Fill(tbl);
-                dataGridView1.DataSource = tbl;
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                this.Close();
+                try
+                {
+                    SqlConnection connection = new SqlConnection(connectionString);
+                    SqlCommand commandID = new SqlCommand(queryString, connection);
+                    DataTable tbl = new DataTable();
+                    connection.Open();
+                    SqlDataAdapter adapt = new SqlDataAdapter(queryString, connectionString);
+                    adapt.Fill(tbl);
+                    dataGridView1.DataSource = tbl;
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    this.Close();
+                }
             }
         }
     }
