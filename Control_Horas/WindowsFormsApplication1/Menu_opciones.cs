@@ -24,14 +24,21 @@ namespace Contro_Dias
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Conexion_db conection = new Conexion_db();
+            Conexion_db conection = new Conexion_db(getSet.connectionString);
             conection.Show();
             this.Hide();
         }
 
         private void Menu_Opciones_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void Grid_View_Button_Click(object sender, EventArgs e)
+        {
+            Grid_View grid = new Grid_View();
+            grid.Show();
+            this.Hide();
         }
     }
 }

@@ -17,3 +17,4 @@ C:\Users\c_mat\Documents\Visual Studio 2015\Projects\WindowsFormsApplication1\Wi
 C:\Users\c_mat\Documents\Visual Studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Control_days.csprojResolveAssemblyReference.cache
 C:\Users\c_mat\Documents\Visual Studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Contro_Dias.Menu_Opciones.resources
 C:\Users\c_mat\Documents\Visual Studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Contro_Dias.Conexion_db.resources
+C:\Users\c_mat\Documents\Visual Studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Contro_Dias.Grid_View.resources

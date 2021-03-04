@@ -44,6 +44,7 @@
             this.Initial_Catalog_Box = new System.Windows.Forms.TextBox();
             this.Accept_Button = new System.Windows.Forms.Button();
             this.connection_label = new System.Windows.Forms.Label();
+            this.connect = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Aply_Button
@@ -171,6 +172,7 @@
             this.Accept_Button.TabIndex = 14;
             this.Accept_Button.Text = "Aceptar";
             this.Accept_Button.UseVisualStyleBackColor = true;
+            this.Accept_Button.Click += new System.EventHandler(this.Accept_Button_Click);
             // 
             // connection_label
             // 
@@ -183,11 +185,21 @@
             this.connection_label.Text = "                                                                                 " +
     "         ";
             // 
+            // connect
+            // 
+            this.connect.AutoSize = true;
+            this.connect.Location = new System.Drawing.Point(12, 9);
+            this.connect.Name = "connect";
+            this.connect.Size = new System.Drawing.Size(56, 17);
+            this.connect.TabIndex = 16;
+            this.connect.Text = "            ";
+            // 
             // Conexion_db
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1898, 596);
+            this.ClientSize = new System.Drawing.Size(550, 596);
+            this.Controls.Add(this.connect);
             this.Controls.Add(this.connection_label);
             this.Controls.Add(this.Accept_Button);
             this.Controls.Add(this.Initial_Catalog_Box);
@@ -209,6 +221,7 @@
             this.Name = "Conexion_db";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Conexion_db";
+            this.Load += new System.EventHandler(this.Conexion_db_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +244,6 @@
         private System.Windows.Forms.TextBox Initial_Catalog_Box;
         private System.Windows.Forms.Button Accept_Button;
         private System.Windows.Forms.Label connection_label;
+        private System.Windows.Forms.Label connect;
     }
 }

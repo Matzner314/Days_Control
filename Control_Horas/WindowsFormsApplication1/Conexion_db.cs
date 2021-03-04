@@ -12,36 +12,43 @@ namespace Contro_Dias
 {
     public partial class Conexion_db : Form
     {
-        public Conexion_db()
+        public Conexion_db(string connectionString)
         {
             InitializeComponent();
         }
 
-        private void Close_Button_Click(object sender, EventArgs e)
+        public void Close_Button_Click(object sender, EventArgs e)
         {
             this.Close();
             Menu_Opciones opciones = new Menu_Opciones();
             opciones.Show();
         }
 
-        private void Aply_Button_Click(object sender, EventArgs e)
+        public void Aply_Button_Click(object sender, EventArgs e)
         {
-            /*string connectionString = "";
-            string server = (Server_Box.ToString() + ";").ToString(); ;
-            string Source = Source_Box.ToString() + ";";
-            string userid = Userid_Box.ToString() + ";";
-            string pass = Password_Box.ToString() + ";";
-            string ini_cat = Initial_Catalog_Box.ToString() + ";";
-            connectionString = ("server=" + server + "Source=" + Source + "User Id=" + userid + "Password=" + pass + "Initial Catalog=" + ini_cat).ToString();
-            if (server == "hola")
-            {
-                connection_label.Text = server;
-                Form inicio = new Form();
-                inicio.Close();
-                inicio.Show();
-            }
-        }*/
+            string connectionString = "";
+            string server = Server_Box.Text;
+            string Source = Source_Box.Text;
+            string userid = Userid_Box.Text;
+            string pass = Password_Box.Text;
+            string ini_cat = Initial_Catalog_Box.Text;
+            connectionString = ("server=" + server + ";Database=" + Source + ";User Id=" + userid + ";Password=" + pass + ";Initial Catalog=" + ini_cat.ToString() + ";Trusted_Connection= True").ToString();
+            getSet.connectionString = connectionString;
+            connection_label.Text = "Credenciales de conexion para " + Source + " guardadas satisfactoriamente...";
+
+
         }
+
+        private void Conexion_db_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Accept_Button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+      
     }
 }
-//"server = 10.150.102.10;Data Source=CL10-15K9R3C;Persist Security Info=true;User Id=CLCANAXTRAX;Password=Cancura2020;Initial Catalog=AxTrax1;";
+
