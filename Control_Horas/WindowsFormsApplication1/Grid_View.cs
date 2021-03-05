@@ -24,7 +24,7 @@ namespace Contro_Dias
             string connectionString = getSet.connectionString;
             DateTime from = dateTimePicker1.Value;
             DateTime to = dateTimePicker2.Value;
-            string queryString = "select Name AS Nombre, ConsecutiveDays AS Dias_Seguidos, CardID AS ID_Tarjeta, InicialDate AS Ultimo_Registro, FinalDate AS Primer_Registro from CAN_tblDayCount where ConsecutiveDays >= 7 AND InicialDate BETWEEN '"+from+"' AND '"+to+"' order by InicialDate desc";
+            string queryString = "select Name AS Nombre, employeeID as id, ConsecutiveDays AS Dias_Seguidos, CardID AS ID_Tarjeta, InicialDate AS Ultimo_Registro, FinalDate AS Primer_Registro from CAN_tblDayCount where ConsecutiveDays >= 7 AND InicialDate BETWEEN '" + from+"' AND '"+to+"' order by InicialDate desc";
             if (connectionString != " ")
             {
                 try

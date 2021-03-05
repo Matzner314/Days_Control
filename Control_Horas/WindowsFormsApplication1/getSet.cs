@@ -9,5 +9,6 @@ namespace Contro_Dias
     public class getSet
     {
         static public string connectionString = " ";
+        static public string Nombre = " ";
     }
 }
