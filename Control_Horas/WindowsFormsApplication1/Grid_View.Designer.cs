@@ -47,12 +47,12 @@
             this.dataGridView1.Location = new System.Drawing.Point(15, 60);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(748, 273);
+            this.dataGridView1.Size = new System.Drawing.Size(878, 273);
             this.dataGridView1.TabIndex = 0;
             // 
             // Close_Button
             // 
-            this.Close_Button.Location = new System.Drawing.Point(658, 367);
+            this.Close_Button.Location = new System.Drawing.Point(796, 367);
             this.Close_Button.Name = "Close_Button";
             this.Close_Button.Size = new System.Drawing.Size(105, 32);
             this.Close_Button.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             // Search_Button
             // 
-            this.Search_Button.Location = new System.Drawing.Point(537, 366);
+            this.Search_Button.Location = new System.Drawing.Point(668, 367);
             this.Search_Button.Name = "Search_Button";
             this.Search_Button.Size = new System.Drawing.Size(106, 32);
             this.Search_Button.TabIndex = 2;
@@ -129,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 406);
+            this.ClientSize = new System.Drawing.Size(903, 406);
             this.Controls.Add(this.To_date_label);
             this.Controls.Add(this.From_date_label);
             this.Controls.Add(this.dateTimePicker2);
