@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Control Dias.exe" size="1222112">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Control Dias.exe" size="2029536">
       <assemblyIdentity name="Control Dias" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TjqiABFssthlcnMG0opJaEdkPkZ4pOFbbq/3CQvbJ/A=</dsig:DigestValue>
+        <dsig:DigestValue>uAY/sjyUP5O8w7KwIe9kys+gYyqBEwQeqx0IsyoDriA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

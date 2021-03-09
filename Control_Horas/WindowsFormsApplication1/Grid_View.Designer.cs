@@ -38,6 +38,8 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.From_date_label = new System.Windows.Forms.Label();
             this.To_date_label = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.combo_Name = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +76,7 @@
             // 
             this.Grid_Title.AutoSize = true;
             this.Grid_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Grid_Title.Location = new System.Drawing.Point(215, 9);
+            this.Grid_Title.Location = new System.Drawing.Point(242, 9);
             this.Grid_Title.Name = "Grid_Title";
             this.Grid_Title.Size = new System.Drawing.Size(382, 32);
             this.Grid_Title.TabIndex = 3;
@@ -125,11 +127,33 @@
             this.To_date_label.TabIndex = 8;
             this.To_date_label.Text = "Hasta:";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(386, 339);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(215, 21);
+            this.checkBox1.TabIndex = 9;
+            this.checkBox1.Text = "Solo registros fuera de rango";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // combo_Name
+            // 
+            this.combo_Name.DisplayMember = "Filtrar por nombre";
+            this.combo_Name.FormattingEnabled = true;
+            this.combo_Name.Location = new System.Drawing.Point(386, 375);
+            this.combo_Name.Name = "combo_Name";
+            this.combo_Name.Size = new System.Drawing.Size(264, 24);
+            this.combo_Name.TabIndex = 10;
+            // 
             // Grid_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 406);
+            this.Controls.Add(this.combo_Name);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.To_date_label);
             this.Controls.Add(this.From_date_label);
             this.Controls.Add(this.dateTimePicker2);
@@ -144,6 +168,7 @@
             this.Name = "Grid_View";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Grid_View";
+            this.Load += new System.EventHandler(this.Grid_View_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -161,5 +186,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label From_date_label;
         private System.Windows.Forms.Label To_date_label;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox combo_Name;
     }
 }

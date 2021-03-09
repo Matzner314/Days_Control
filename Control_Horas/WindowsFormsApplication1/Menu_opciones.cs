@@ -33,12 +33,5 @@ namespace Contro_Dias
         {
             
         }
-
-        private void Grid_View_Button_Click(object sender, EventArgs e)
-        {
-            Grid_View grid = new Grid_View();
-            grid.Show();
-            this.Hide();
-        }
     }
 }

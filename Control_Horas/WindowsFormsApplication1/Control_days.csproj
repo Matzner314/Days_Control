@@ -164,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Reloj.ico" />
+    <None Include="Resources\alarma.wav" />
     <None Include="Resources\Reloj.ico" />
   </ItemGroup>
   <ItemGroup>

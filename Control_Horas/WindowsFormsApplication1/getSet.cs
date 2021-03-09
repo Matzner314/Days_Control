@@ -16,5 +16,8 @@ namespace Contro_Dias
         static public int Card_id = 0;
         static public int Employee_id = 0;
         static public int rows = 0;
+        static public int Id_departament = 0;
+        static public string emp_id ="";
+        static public string hrs = "";
     }
 }
