@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Media;
 namespace Contro_Dias
 {
     public partial class Menu_Opciones : Form
     {
+        SoundPlayer warning = new SoundPlayer();
         public Menu_Opciones()
         {
             InitializeComponent();
@@ -19,6 +13,10 @@ namespace Contro_Dias
 
         private void Close_Button_Click(object sender, EventArgs e)
         {
+            if (warning != null)
+            {
+                warning.Stop();
+            }
             this.Close();
         }
 
@@ -32,6 +30,20 @@ namespace Contro_Dias
         private void Menu_Opciones_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void Sound_Test_Click(object sender, EventArgs e)
+        {
+            warning = new SoundPlayer(Application.StartupPath + @"\sound\alarma.wav");
+            warning.PlayLooping();
+        }
+
+        private void Stop_Test_Click(object sender, EventArgs e)
+        {
+            if (warning != null)
+            {
+                warning.Stop();
+            }
         }
     }
 }
