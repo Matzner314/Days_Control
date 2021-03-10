@@ -167,7 +167,7 @@
             this.MinimumSize = new System.Drawing.Size(801, 392);
             this.Name = "Grid_View";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Grid_View";
+            this.Text = "Reporte";
             this.Load += new System.EventHandler(this.Grid_View_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
