@@ -136,7 +136,6 @@
             this.checkBox1.TabIndex = 9;
             this.checkBox1.Text = "Solo registros fuera de rango";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // combo_Name
             // 
@@ -146,6 +145,7 @@
             this.combo_Name.Name = "combo_Name";
             this.combo_Name.Size = new System.Drawing.Size(264, 24);
             this.combo_Name.TabIndex = 10;
+            this.combo_Name.SelectedIndexChanged += new System.EventHandler(this.combo_Name_SelectedIndexChanged);
             // 
             // Grid_View
             // 

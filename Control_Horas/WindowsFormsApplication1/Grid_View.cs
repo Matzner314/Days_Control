@@ -17,15 +17,15 @@ namespace Contro_Dias
             this.Close();
         }
 
+        //--------------------------------------------------------------------------------------------------------
+        //---------------------------------------APPLY FILTERS AND SEARCH IN DB-----------------------------------
+        //--------------------------------------------------------------------------------------------------------
+
         private void Search_Button_Click(object sender, EventArgs e)
         {
-            int orden = 0;
-            String nombre = combo_Name.DisplayMember;
             int days;
             string name = combo_Name.Text;
             string queryString;
-            object numero = combo_Name.SelectedValue;
-            orden = combo_Name.SelectedIndex;
             if (checkBox1.Checked == true)
             {
                 days = 7;
@@ -37,13 +37,13 @@ namespace Contro_Dias
             string connectionString = getSet.connectionString;
             DateTime from = dateTimePicker1.Value;
             DateTime to = dateTimePicker2.Value;
-            if (name == "Filtrar por nombre")
+            if (name == "Filtrar por nombre" || name == "")
             {
-                queryString = "select Name AS Nombre, employeeID as id, ConsecutiveDays AS Dias_Seguidos, CardID AS ID_Tarjeta, InicialDate AS Ultimo_Registro, FinalDate AS Primer_Registro from CAN_tblDayCount where ConsecutiveDays >= " + days + " AND InicialDate BETWEEN '" + from + "' AND '" + to + "' order by InicialDate desc";
+                queryString = "select Name AS Nombre, FinalDate AS Primer_Registro, InicialDate AS Ultimo_Registro, ConsecutiveDays AS Dias_Seguidos, CardID AS ID_Tarjeta, employeeID as id from CAN_tblDayCount where ConsecutiveDays >= " + days + " AND InicialDate BETWEEN '" + from + "' AND '" + to + "' order by InicialDate desc";
             }
             else
             {
-                queryString = "select Name AS Nombre, employeeID as id, ConsecutiveDays AS Dias_Seguidos, CardID AS ID_Tarjeta, InicialDate AS Ultimo_Registro, FinalDate AS Primer_Registro from CAN_tblDayCount where ConsecutiveDays >= " + days + " AND Name = '"+ name +"' AND InicialDate BETWEEN '" + from + "' AND '" + to + "' order by InicialDate desc";
+                queryString = "select Name AS Nombre, FinalDate AS Primer_Registro, InicialDate AS Ultimo_Registro, ConsecutiveDays AS Dias_Seguidos, CardID AS ID_Tarjeta, employeeID as id from CAN_tblDayCount where ConsecutiveDays >= " + days + " AND employeeID = " + getSet.emp_id +" AND InicialDate BETWEEN '" + from + "' AND '" + to + "' order by InicialDate desc";
             }
             if (connectionString != " ")
             {
@@ -56,6 +56,7 @@ namespace Contro_Dias
                     SqlDataAdapter adapt = new SqlDataAdapter(queryString, connectionString);
                     adapt.Fill(tbl);
                     dataGridView1.DataSource = tbl;
+                    connection.Close();
                 }
                 catch (SqlException ex)
                 {
@@ -64,6 +65,10 @@ namespace Contro_Dias
                 }
             }
         }
+
+        //--------------------------------------------------------------------------------------------------------
+        //----------------------------------------------FILL COMBO BOX--------------------------------------------
+        //--------------------------------------------------------------------------------------------------------
 
         public void combo_Fill(ComboBox cb)
         {
@@ -78,7 +83,7 @@ namespace Contro_Dias
                 cb.ValueMember = "Value";
                 while (rdr.Read())
                 {
-                    cb.Items.Add(Text = (rdr["iEmployeeNum"].ToString() +" - " + rdr["tFirstName"].ToString() + " " + rdr["tLastName"].ToString()));
+                    cb.Items.Add(Text = (rdr["tFirstName"].ToString() +" " + rdr["tLastName"].ToString() + "-" + rdr["iEmployeeNum"].ToString()));
                 }
                 rdr.Close();
                 connection.Close();
@@ -95,9 +100,20 @@ namespace Contro_Dias
             combo_Fill(combo_Name);
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
+        //--------------------------------------------------------------------------------------------------------
+        //-------------------------------------EXTRACT ID FROM COMBO BOX STRING-----------------------------------
+        //--------------------------------------------------------------------------------------------------------
 
+        private void combo_Name_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            getSet.emp_id = "";
+            string cadena = combo_Name.Text;
+            char[] separators = new char[] { '-' };
+            string[] subs = cadena.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var sub in subs)
+            {
+                getSet.emp_id = sub;
+            }
         }
     }
 }
