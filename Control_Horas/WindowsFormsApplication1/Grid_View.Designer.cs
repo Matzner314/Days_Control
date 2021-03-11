@@ -40,6 +40,7 @@
             this.To_date_label = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.combo_Name = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,12 +50,12 @@
             this.dataGridView1.Location = new System.Drawing.Point(15, 60);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(878, 273);
+            this.dataGridView1.Size = new System.Drawing.Size(1022, 273);
             this.dataGridView1.TabIndex = 0;
             // 
             // Close_Button
             // 
-            this.Close_Button.Location = new System.Drawing.Point(796, 367);
+            this.Close_Button.Location = new System.Drawing.Point(932, 367);
             this.Close_Button.Name = "Close_Button";
             this.Close_Button.Size = new System.Drawing.Size(105, 32);
             this.Close_Button.TabIndex = 1;
@@ -64,7 +65,7 @@
             // 
             // Search_Button
             // 
-            this.Search_Button.Location = new System.Drawing.Point(668, 367);
+            this.Search_Button.Location = new System.Drawing.Point(811, 367);
             this.Search_Button.Name = "Search_Button";
             this.Search_Button.Size = new System.Drawing.Size(106, 32);
             this.Search_Button.TabIndex = 2;
@@ -130,7 +131,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(386, 339);
+            this.checkBox1.Location = new System.Drawing.Point(383, 339);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(215, 21);
             this.checkBox1.TabIndex = 9;
@@ -141,17 +142,27 @@
             // 
             this.combo_Name.DisplayMember = "Filtrar por nombre";
             this.combo_Name.FormattingEnabled = true;
-            this.combo_Name.Location = new System.Drawing.Point(386, 375);
+            this.combo_Name.Location = new System.Drawing.Point(506, 374);
             this.combo_Name.Name = "combo_Name";
             this.combo_Name.Size = new System.Drawing.Size(264, 24);
             this.combo_Name.TabIndex = 10;
             this.combo_Name.SelectedIndexChanged += new System.EventHandler(this.combo_Name_SelectedIndexChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(380, 377);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 17);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Filtro por nombre:";
+            // 
             // Grid_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 406);
+            this.ClientSize = new System.Drawing.Size(1049, 406);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.combo_Name);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.To_date_label);
@@ -188,5 +199,6 @@
         private System.Windows.Forms.Label To_date_label;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ComboBox combo_Name;
+        private System.Windows.Forms.Label label1;
     }
 }

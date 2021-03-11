@@ -14,5 +14,9 @@ namespace Contro_Dias
         static public int rows = 0;
         static public int Id_departament = 0;
         static public string emp_id ="";
+        static public int reset_Count = 0;
+        static public int rows_r = 0;
+        static public int count_exception;
+        static public int same_day;
     }
 }
