@@ -39,7 +39,7 @@ namespace Contro_Dias
             DateTime to = dateTimePicker2.Value;
             if (name == "Filtrar por nombre" || name == "")
             {
-                queryString = "select Name AS Nombre, FinalDate AS Primer_Registro, InicialDate AS Ultimo_Registro, ConsecutiveDays AS Dias_Seguidos, CardID AS ID_Tarjeta, employeeID as id from CAN_tblDayCount where ConsecutiveDays >= " + days + " AND InicialDate BETWEEN '" + from + "' AND '" + to + "' order by InicialDate desc";
+                queryString = "select Name AS Nombre, LName AS Apellido, FinalDate AS Primer_Registro, InicialDate AS Ultimo_Registro, ConsecutiveDays AS Dias_Seguidos, CardID AS ID_Tarjeta, employeeID as id from CAN_tblDayCount where ConsecutiveDays >= " + days + " AND InicialDate BETWEEN '" + from + "' AND '" + to + "' order by InicialDate desc";
             }
             else
             {
