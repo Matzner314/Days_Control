@@ -1,0 +1,21 @@
+USE [AxTrax1]
+GO
+
+/****** Object:  Table [dbo].[CAN_tblDayCount]    Script Date: 11/03/2021 14:41:11 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[CAN_tblDayCount](
+	[Name] [nchar](100) NOT NULL,
+	[ConsecutiveDays] [int] NOT NULL,
+	[CardID] [int] NOT NULL,
+	[InicialDate] [datetime] NULL,
+	[FinalDate] [datetime] NULL,
+	[employeeID] [int] NULL,
+	[ResetCount] [int] NOT NULL,
+	[LName] [nchar](10) NULL
+) ON [PRIMARY]
+GO
